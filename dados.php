@@ -1,23 +1,8 @@
-<?php 
+<?php
 
-$alunos = [];
+include 'conexao.php';
 
-$alunos[] = [
-    'nome' => 'Chiquim',
-    'cidade' => 'Caucaia',
-    'matricula' => '23',
-];
-
-$alunos[] = [
-    'nome' => 'Madeinusa',
-    'cidade' => 'Quixada',
-    'matricula' => '28',
-];
-
-$alunos[] = [
-    'nome' => 'Valcigleydson',
-    'cidade' => 'Mauriti',
-    'matricula' => '11'
-];
+$sql = "SELECT nome, cidade, matricula FROM alunos.aluno ";
+$resultado = $conn->query($sql);
 
 include 'tabela.php';

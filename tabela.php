@@ -13,16 +13,16 @@
             </tr>
         </thead>
         <tbody>
-        <?php 
-            foreach($alunos as $cadaAluno) {
+            <?php
+            while ($alunos = $resultado->fetch_assoc()) {
                 echo "<tr>
-                    <td>{$cadaAluno['nome']}</td>
-                    <td>{$cadaAluno['cidade']}</td>
-                    <td>{$cadaAluno['matricula']}</td>
+                    <td>{$alunos['nome']}</td>
+                    <td>{$alunos['cidade']}</td>
+                    <td>{$alunos['matricula']}</td>
                 </tr>";
             }
-        ?>
-    </tbody>
+            ?>
+        </tbody>
     </table>
-    
+
 </div>
