@@ -28,8 +28,8 @@ if ($conexao->query($table) === TRUE) {
 }
 
 // Inserindo dados na tabela
-$InserindoDados = "INSERT INTO MyGuests (firstname, lastname, email)
-VALUES ('John', 'Doe', 'john@example.com')";
+$InserindoDados = "INSERT INTO MyGuests (nome, cidade, matricula)
+VALUES ('Bruno', 'Caucaia', '156')";
 
 if ($conexao->query($InserindoDados) === TRUE) {
   echo "New record created successfully";
